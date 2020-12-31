@@ -1,0 +1,200 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      rel="stylesheet">
+  <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/script.js" ></script>
+  <link rel="stylesheet" type="text/css" href="styles/jquery-clockpicker.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="styles/jquery-clockpicker.min.js"></script>
+
+  
+
+  <title>Dashboard</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light blue fixed-top">
+        <button id="sidebarCollapse" class="btn navbar-btn">
+        <i class="fas fa-lg fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="index.php">
+        <img src="../assets/system_images/mlogo.png" id="logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            <a class="nav-link" id="link" href="logout.php">
+                <i class="fas fa-sign-out-alt"></i>
+                LogOut</a>
+            </li>
+            
+            <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </div> -->
+        </li>
+        </ul>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <nav id="sidebar">
+            
+            <ul class="list-unstyled components">
+            <li>
+                    <a href="employee_home.php"><i class="fa fa-tachometer"></i>Dashboard</a>
+             </li>
+             <li>
+                 <a href=""><i class="fa fa-user"></i><span>Profile</span></a>
+             </li>   
+             
+             <li>
+                    <a href="service_history.php"><i class="fa fa-user-md"></i>Service History</a>
+             </li>
+             <li class="">
+                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                     <i class="fas fa-calendar"></i><span>Customers</span></a>
+                 <ul class="collapse list-unstyled" id="homeSubmenu">
+                     <li>
+                         <a href="view_customers.php"><i class="fa fa-calendar-plus-o"></i><span> View Customers</span></a>
+                     </li>
+                     <li>
+                         <a href="add_new_customer.php"><i class="fa fa-history"></i><span>Add New Customers</span></a>
+                     </li>
+                     <li>
+                         <a href="verify_customers.php"><i class="fa fa-history"></i><span>Verify Cusotmers</span></a>
+                     </li>
+                 </ul>
+             </li>
+             <li class="">
+                 <a href="#hSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                     <i class="fas fa-calendar"></i><span>Product</span></a>
+                 <ul class="collapse list-unstyled" id="hSubmenu">
+                     <li>
+                         <a href="receive_products.php"><i class="fa fa-calendar-plus-o"></i><span>Recieve Product</span></a>
+                     </li>
+                     <li>
+                         <a href="ship_products.php"><i class="fa fa-history"></i><span>Ship Product</span></a>
+                     </li>
+                     <li>
+                         <a href="release_products.php"><i class="fa fa-history"></i><span>Release Product</span></a>
+                     </li>
+                 </ul>
+             </li>
+             <li>
+                    <a href="helpline.php"><i class="fa fa-user"></i>Help Line</a>
+             </li>
+                <li>
+                     <a href=""><i class="fas fa-tint"></i><span>Terms and Conditions</span></a>
+             </li>
+                 
+                     </ul> 
+             </li>
+            </ul>
+            
+            
+        </nav>
+        
+        <div class="content">
+
+<div class="patientprofile">
+    <div class="d-flex justify-content-center align-items-center container ">
+        <div class="col-md-8 donor">
+            <h1 class="text-white bg-dark text-center">
+                Add New Customer
+            </h1>
+			<table>
+				<div class="form-group">
+					<label>Name:</label>
+					<input type="text" class="form-control" name="name"<!--value="<?php echo $name;?>" required>
+					<!-- <span style="color:red;"><?php echo $err_name;?></span> -->
+				</div>
+				<div class="form-group">
+					<label>UserName:</label>
+					<input type="text" class="form-control" name="uname"<!--value="<?php echo $uname;?>" required>
+					<!-- <span style="color:red;"><?php echo $err_uname;?></span> -->
+				</div>
+                <div class="form-group">
+					<label>Password:</label>
+					<input type="password" class="form-control" name="password"<!--value="<?php echo $pass;?>" required>
+					<!-- <span style="color:red;"><?php echo $err_pass;?></span> -->
+				</div>
+				<div class="form-group">
+					<label>ConfirmPassword:</label>
+					<input type="password" class="form-control" name="confirmPassword"<!--value="<?php echo $cpass;?>" required>
+					<!-- <span style="color:red;"><?php echo $err_cpass;?></span> -->
+				</div>
+                <div class="form-group">
+					<label>Contact:</label>
+					<input type="text" class="form-control" name="contact"<!--value="<?php echo $contact;?>" required>
+					<!-- <span style="color:red;"><?php echo $err_contact;?></span> -->
+				</div>
+				<div class="form-group">
+					<label>Email:</label>
+					<input type="email" class="form-control" name="email"<!--value="<?php echo $email;?>" required>
+					<!-- <span style="color:red;"><?php echo $err_email;?></span> -->
+				</div>
+                <div class="form-group">
+					<label>Address:</label>
+					<input type="textarea" class="form-control" name="address"<!--value="<?php echo $address;?>" required>
+					<!-- <span style="color:red;"><?php echo $err_address;?></span> -->
+				</div>
+				<div class="form-group">
+					<label>Security Que:</label>
+					<input type="text" class="form-control" name="securityQue" <!--value="<?php echo $sq;?>" placeholder = "Who is your best friend?" required>
+					<!-- <span style="color:red;"><?php echo $err_sq;?></span> -->
+				</div>
+				<div class="form-group">
+					<input type="button" id="addcustomer" class="btn btn-primary" name="addCustomer" value="Add Customer">
+				</div>
+			</table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
