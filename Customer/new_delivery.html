@@ -1,0 +1,214 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      rel="stylesheet">
+  <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="../assets/js/icons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/script.js" ></script>
+  <link rel="stylesheet" type="text/css" href="styles/jquery-clockpicker.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="styles/jquery-clockpicker.min.js"></script>
+
+  
+
+  <title>Dashboard</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light blue fixed-top">
+        <button id="sidebarCollapse" class="btn navbar-btn">
+        <i class="fas fa-lg fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="index.php">
+        <img src="../assets/system_images/mlogo.png" id="logo" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            <a class="nav-link" id="link" href="logout.php">
+                <i class="fas fa-sign-out-alt"></i>
+                LogOut</a>
+            </li>
+            
+
+            <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </div> -->
+        </li>
+        </ul>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <nav id="sidebar">
+            
+            <ul class="list-unstyled components">
+            <li>
+                    <a href="customer_home.php"><i class="fa fa-tachometer"></i>Dashboard</a>
+             </li>
+             <li>
+                 <a href=""><i class="fa fa-user"></i><span>Profile</span></a>
+             </li>   
+             
+             <li>
+                    <a href="track_products.php"><i class="fa fa-user-md"></i>Track Products</a>
+             </li>
+                <li>
+                    <a href="c_service_history.php"><i class="fa fa-user-md"></i>History</a>
+             </li>
+             <li>
+                     <a href="new_delivery.php"><i class="fas fa-tint"></i><span>New Delivery</span></a>
+             </li>
+             <li>
+                     <a href="c_helpline.php"><i class="fas fa-tint"></i><span>Helpline</span></a>
+             </li>
+                
+             <li>
+                 <!-- terms and condition.php -->
+                 <a href=""><i class="fas fa-tint"></i><span>Terms and Conditions</span></a>
+             </li>
+                 
+                     </ul> 
+             </li>
+            </ul>
+            
+            
+        </nav>
+        
+    <div class="content">
+<div class="patientprofile">
+    <div class="d-flex justify-content-center align-items-center container ">
+        <div class="col-md-8 donor">
+            <h1 class="text-white bg-dark text-center">
+                Delivery Form
+            </h1>
+
+            <h2> Product Information</h2><br>
+
+			<table>
+                    
+                        <select class="form-control" name = "category">
+                            <option selected hidden>Select a Category</option>
+                            <option value="0">Electronics</option>
+                            <option value="1">Mobiles</option>
+                            <option value="2">Accessories</option>
+                            <option value="3">Papers</option>
+                        </select><br>
+                    
+                    
+                        <input type = "textarea" class="form-control" name = "description" placeholder = "Describe the product" required><br>
+                    
+
+					
+                        <input type = "text" class="form-control" name = "quantity" placeholder = "Quantity" required><br>
+                    
+					
+                        <select class="form-control" name="pmethod">
+                            <option selected hidden>Select Payment Method</option>
+                            <option value="0">Bkash</option>
+                            <option value="1">Rocket</option>
+                            <option value="2">Nexus</option>
+                            <option value="3">Cash on deliver</option>
+                        </select><br>
+					
+                        <select class="form-control" name = "size">
+                            <option selected hidden>Select size</option>
+                            <option value="0">Extra Large</option>
+                            <option value="1">Large</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Small</option>
+                        </select><br>
+                    
+					
+                        <select class="form-control" name = "sbid">
+                            <option selected hidden>Select Sending Branch</option>
+                            <!-- <?php
+                                foreach($allBranch as $branch){
+                                    echo "<option value = '".$branch['Id']."'>".$branch["Branch_Name"]."</option>";
+                                }
+                            ?> -->
+                        </select><br>
+
+                    <h2>Receiver Information</h2>
+
+					
+                        <input type = "text" class="form-control" name = "rname"; placeholder = "Full Name" required><br>
+                    
+
+
+					
+                        <input type = "text" class="form-control" name = "rcontact" placeholder = "Contact Number" required><br>
+                    
+
+
+                    
+                        <input type = "text" class="form-control" name = "email" placeholder = "Email"><br>
+                    
+
+
+                    
+                        <input type = "text" class="form-control" name = "raddress" placeholder = "Address" required><br>
+
+                
+                    
+                        <select class="form-control" name = "rbid">
+                            <option selected hidden>Select Receiving Branch</option>
+                            <!-- <?php
+                                foreach($allBranch as $branch){
+                                    echo "<option value = '".$branch['Id']."'>".$branch["Branch_Name"]."</option>";
+                                }
+                            ?> -->
+                        </select><br>
+                    
+					<input type="button" id="confirmDeli" class="btn btn-primary" name="newdelivery" value="Confirm Delivery">
+				</div>
+			</table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
