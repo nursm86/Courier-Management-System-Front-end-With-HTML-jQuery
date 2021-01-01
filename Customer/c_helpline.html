@@ -49,7 +49,7 @@
         <button id="sidebarCollapse" class="btn navbar-btn">
         <i class="fas fa-lg fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="../Basic/index.html">
         <img src="../assets/system_images/mlogo.png" id="logo" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -85,7 +85,7 @@
             
             <ul class="list-unstyled components">
             <li>
-                    <a href="customer_home.php"><i class="fa fa-tachometer"></i>Dashboard</a>
+                    <a href=""><i class="fa fa-tachometer"></i>Dashboard</a>
              </li>
              <li>
                  <a href="../Customer/customer_home.html"><i class="fa fa-user"></i><span>Profile</span></a>
@@ -126,7 +126,7 @@
             </h1>
 				<div class="form-group">
                 <select class="form-control"  id="sbid" onchange="fill()">
-                    <option selected hidden>Select Branch</option>
+                    <option id="helpline" selected hidden>Select Branch</option>
                             <!-- <?php
                                 foreach($allBranch as $branch){
                                     echo "<option value = '".$branch['Id']."'>".$branch["Branch_Name"]."</option>";

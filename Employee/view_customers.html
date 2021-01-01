@@ -1,14 +1,4 @@
-<?php
-    session_start();
-    if(!isset($_SESSION['id'])){
-        header("Location: login.php");
-    }
-    include('header.php');
-    include('employeenavbar.php');
-    include('employeesidebar.php');
-    require_once 'controllers/CustomerController.php';
-    $customers = getAllCustomers();
-?>
+
 <!doctype html>
 <html lang="en">
 
@@ -183,7 +173,7 @@
                     </tr>
                 </thead> 
                 <tbody id = "suggestion">
-                    <div class="col-md-8">
+                    <div id="view"class="col-md-8">
                     <!-- <?php
                         foreach($customers as $customer){
                             echo "<tr>";
