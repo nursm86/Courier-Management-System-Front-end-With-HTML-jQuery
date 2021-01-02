@@ -1,17 +1,18 @@
-<?php
-	require_once 'controllers/LoginController.php'
-?>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
 	<link rel="stylesheet" href="../assets/css/indexstyle.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="../assets/ajax/user.js?v=<?php echo time(); ?>"></script>
 	<title>Login</title>
 </head>
 
@@ -37,17 +38,16 @@
 			<div class="col-lg-8 m-auto d-block">
 				<div class="form-group">
 					<label for="user">Username:</label>
-					<input type="text" name="username" id="user" <!--value="<?php echo $uname; ?>" id="user" class="form-control">
-					<span id="err_user" style="color:red;"><?php echo $err_uname;?></span> 
+					<input type="text" name="username" id="userName" class="form-control">
+					<span id="err_user" style="color:red;"></span> 
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input type="password" name="password" id="pass" class="form-control" <!--value="<?php echo $password; ?>">
-					<span  id="err_pass" style="color:red;"><?php echo $err_password; ?></span>
+					<input type="password" name="password" id="pass" class="form-control" >
+					<span  id="err_pass" style="color:red;"></span>
 				</div>
 				<div class="form-group">
-					<input type="checkbox"  name="rememberme"> Remember Me<br>
-					<span style="color:red;"><?php echo $loginError;?></span>
+					<span style="color:red;" id="msg"></span>
 				</div>
 				<div class="form-group">
 					
