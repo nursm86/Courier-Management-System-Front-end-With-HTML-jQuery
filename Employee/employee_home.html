@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
 
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -23,9 +23,6 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <script src="../assets/js/icons.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -33,12 +30,11 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="../assets/js/script.js" ></script>
-  <link rel="stylesheet" type="text/css" href="styles/jquery-clockpicker.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="styles/jquery-clockpicker.min.js"></script>
-
-  
+<script src="../assets/js/jquery-clockpicker.min.js"></script>
+<script type="text/javascript" src="../assets/ajax/employee.js?v=<?php echo time(); ?>"></script>
 
   <title>Dashboard</title>
   <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
@@ -145,7 +141,6 @@
                 <!-- <img src="<?php echo $employee[0]['image']?>  " class="doc-img"> -->
                 <div class="btn-group">
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editimage"><i class="fa fa-picture-o"></i></button>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editpass"><i class="fa fa-key"></i></button>
                 </div>
                 <!-- <h3><?php echo $employee[0]['name'] ?></h3> -->
@@ -166,21 +161,21 @@
 
                         <td class="tdattribute">Name</td>
                         <td>:</td>
-                        <!-- <td><?php echo $employee[0]['name'] ?></td> -->
+                        <td id="showname"></td>
 
                     </tr>
                     <tr>
 
                         <td class="tdattribute">Email</td>
                         <td>:</td>
-                        <!-- <td><?php echo $employee[0]['email']?></td> -->
+                        <td id="showEmail"></td>
 
                     </tr>
 
                     <tr>
                         <td class="tdattribute">Date of Birth</td>
                         <td>:</td>
-                        <!-- <td><?php echo $employee[0]['dob'] ?></td> -->
+                        <td id="showDob"></td>
 
                     </tr>
 
@@ -188,7 +183,7 @@
 
                         <td class="tdattribute">Address</td>
                         <td>:</td>
-                        <!-- <td><?php echo $employee[0]['address']?></td> -->
+                        <td id="showAddress"></td>
 
                     </tr>
 
@@ -196,34 +191,21 @@
 
                         <td class="tdattribute">Phone Number</td>
                         <td>:</td>
-                        <!-- <td><?php echo $employee[0]['phone']; ?></td> -->
+                        <td id="showPhone"></td>
 
                     </tr>
                     <tr>
 
                         <td class="tdattribute">Joining Date</td>
                         <td>:</td>
-                        <!-- <td><?php echo $employee[0]['jdate']?></td> -->
+                        <td id="showjDate"></td>
 
                     </tr>
 
                     <tr>
                         <td class="tdattribute">Designation</td>
                         <td>:</td>
-                        <!-- <td><?php
-                            if($employee[0]['desig'] == 0){
-                                echo "Manager";
-                            }
-                            else if($employee[0]['desig'] == 1){
-                                echo "Worker";
-                            }
-                            else if($employee[0]['desig'] == 2){
-                                echo "Delivery Boy";
-                            }
-                            else if($employee[0]['desig'] == 1){
-                                echo "Driver";
-                            }
-                         ?></td> -->
+                        <td id="showdesig"></td>
 
                     </tr>
                     
@@ -231,42 +213,13 @@
 
                         <td class="tdattribute">Qualification</td>
                         <td>:</td>
-                        <!-- <td><?php echo $employee[0]['qualification']?></td> -->
-
+                        <td id="showQuali"></td>
                     </tr>
 
                 </tbody>
             </table>
 
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editmodal"><i class="fa fa-pencil-square-o"></i></button>
-        </div>
-    </div>
-    <!-- ---------------------------------------editimage------------------------------------------------- -->
-    <div class="modal fadeInDown" id="editimage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Picture</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                        <div class="form-group ">
-                            <img src="../assets/system_images/placeholder.png" onclick="triggerClick()" id="profileDisplay"><br> -->
-                            <label for="file">Image</label>
-                            <input type="file" name="file" id="file"  <!--value="<?php echo $file; ?>" class="form-control">
-
-                        </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                    <input type="button" id="update" class="btn btn-primary" name="imgUpdate" value="Update"></button>
-                </div>
-            </div>
         </div>
     </div>
     <!-- -----------------------------editpass--------------------------------------------------- -->
@@ -280,18 +233,21 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                        <div class="form-group">
-                            <label for="pass">Current Password</label>
-                            <input type="password" class="form-control" name="pass">
-                        </div>
-                        <div class="form-group">
-                            <label for="npass">New Password</label>
-                            <input type="password" class="form-control" name="npass">
-                        </div>
-                        <div class="form-group">
-                            <label for="cPass">Confirm Password</label>
-                            <input type="password" class="form-control" name="cPass">
-                        </div>
+                    <div class="form-group">
+                        <label for="pass">Current Password</label>
+                        <input type="password" class="form-control" id="oldpass">
+                        <span style="color:red;" id="erroldpass"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="npass">New Password</label>
+                        <input type="password" class="form-control" id="npass">
+                        <span style="color:red;" id="errnpass"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cPass">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpass">
+                        <span style="color:red;" id="errcpass"></span>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -314,21 +270,21 @@
                 <div class="modal-body">
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" class="form-control" name="name"  <!--value="<?php echo $employee[0]['name'] ?>">
+                            <input type="text" class="form-control" id="name">
                         </div>
                         
                         <div class="form-group">
                             <label>Date of Birth</label>
-                            <input type="date" class="form-control" name="dob"  <!--value="<?php  echo $employee[0]['dob'] ?>">
+                            <input type="text" class="form-control" id="dob" readonly>
                         </div>
 
                         <div class="form-group">
                             <label>Address</label>
-                            <input type="text" class="form-control" name="address"  <!--value="<?php echo $employee[0]['address']?>">
+                            <input type="text" class="form-control" id="address">
                         </div>
                         <div class="form-group">
                             <label>Phone Number</label>
-                            <input type="text" class="form-control" name="phone"  <!--value="<?php echo $employee[0]['phone']; ?>">
+                            <input type="text" class="form-control" id="phone">
                         </div>
                 </div>
                 <div class="modal-footer">

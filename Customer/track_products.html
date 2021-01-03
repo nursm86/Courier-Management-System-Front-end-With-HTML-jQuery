@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
 
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -23,9 +23,6 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <script src="../assets/js/icons.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -33,14 +30,10 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="../assets/js/script.js" ></script>
-  <link rel="stylesheet" type="text/css" href="styles/jquery-clockpicker.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
+  <script type="text/javascript" src="../assets/ajax/trackProduct.js?v=<?php echo time(); ?>"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="styles/jquery-clockpicker.min.js"></script>
-
-  
-
-  <title>Dashboard</title>
+  <title>Track Products</title>
   <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
 </head>
 
@@ -85,7 +78,7 @@
             
             <ul class="list-unstyled components">
             <li>
-                    <a href="customer_home.php"><i class="fa fa-tachometer"></i>Dashboard</a>
+                    <a href="../Customer/customer_home.html"><i class="fa fa-tachometer"></i>Dashboard</a>
              </li>
              <li>
                  <a href="../Customer/customer_home.html"><i class="fa fa-user"></i><span>Profile</span></a>
@@ -106,7 +99,7 @@
                 
              <li>
                  <!-- terms and condition.php -->
-                 <a href=""><i class="fas fa-tint"></i><span>Terms and Conditions</span></a>
+                 <a href="../Customer/terms&conditions.html"><i class="fas fa-tint"></i><span>Terms and Conditions</span></a>
              </li>
                  
                      </ul> 
@@ -138,27 +131,8 @@
                     <td></td>
                 </tr>
                 </thead>
-                <tbody>
-                    <div id="track"class="col-md-8">
-                <!-- <?php
-                    foreach($pendingProducts as $pendingproduct){
-                        echo "<tr>";
-                        echo "<td>".$pendingproduct['sbName']."</td>";
-                        echo "<td>".$pendingproduct['rbName']."</td>";
-                        echo "<td>".$pendingproduct['date']."</td>";
-                        echo "<td>".$pendingproduct['rname']."</td>";
-                        echo "<td>".$pendingproduct['raddress']."</td>";
-                        if($pendingproduct['state'] == 0){
-                            echo "<td>"."Not Yet Received at the Branch"."</td>";
-                        }
-                        else{
-                            echo "<td>"."Ready for Shipping"."</td>";
-                        }
-                        echo '<td><a href="canceldelivery.php?id='.$pendingproduct["id"].'" class="btn btn-danger">Cancel</a></td>';
-                        echo "</tr>";
-                    }
-                
-                ?> -->
+                <tbody id="track">
+                    
                 </tbody>
             </table>
             </div>
@@ -181,8 +155,7 @@
                     <td>Product State</td>
                 </tr>
                 </thead>
-                <tbody>
-                    <div id="track1" class="col-md-8">
+                <tbody id="track1">
                 <!-- <?php
                     foreach($shippedProducts as $shippedproduct){
                         echo "<tr>";
@@ -191,12 +164,7 @@
                         echo "<td>".$shippedproduct['date']."</td>";
                         echo "<td>".$shippedproduct['rname']."</td>";
                         echo "<td>".$shippedproduct['raddress']."</td>";
-                        if($shippedproduct['state'] == 2){
-                            echo "<td>"."Product is on the way now"."</td>";
-                        }
-                        else{
-                            echo "<td>"."Product is ready to recived"."</td>";
-                        }
+                        
                         echo "</tr>";
                     }
                 

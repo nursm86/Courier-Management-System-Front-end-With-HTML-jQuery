@@ -32,9 +32,9 @@
     <script src="../assets/js/script.js" ></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
         <script src="../assets/js/jquery-clockpicker.min.js"></script>
-        <script type="text/javascript" src="../assets/ajax/newOrder.js"></script>
+        <script type="text/javascript" src="../assets/ajax/cHelpline.js?v=<?php echo time(); ?>"></script>
     
-    <title>New Delivery</title>  
+    <title>Customer Helpline</title>
     <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
     </head>
 
@@ -108,81 +108,40 @@
             </ul>
             
             
-        </nav>
+        </nav><br><br>
+            <div class="col-md-8 box center">
+                <h1 class="text-white bg-dark text-center">
+                    Terms And Condition's
+                </h1>
+                <table class="table">
         
+                    <tbody>
+                        <tr>
+                            <td class="tdattribute">1.You Can Cancel any delivery Before it got shipped.</td>
+                        </tr>
         
-    <div class="content">
-<div class="patientprofile">
-    <div class="d-flex justify-content-center align-items-center container ">
-        <div class="col-md-8 donor">
-            <h1 class="text-white bg-dark text-center">
-                Delivery Form
-            </h1>
-
-            <h2> Product Information</h2><br>
-
-			<table>
-                        <select class="form-control" id= "category" required>
-                            <option selected hidden>Select a Category</option>
-                            <option value="0">Electronics</option>
-                            <option value="1">Mobiles</option>
-                            <option value="2">Accessories</option>
-                            <option value="3">Papers</option>
-                            <option value="4">Packages</option>
-                        </select><br>
-                    
-                    
-                        <input type = "textarea" class="form-control" id = "description" placeholder = "Describe the product" required>
-                        <span style="color:red;" id="errdescription"></span><br>
-
-					
-                        <input type = "number" min="1" class="form-control" id = "quantity" placeholder = "Quantity">
-                        <span style="color:red;" id="errquantity"></span><br>
-					
-                        <select class="form-control" id="pmethod" required>
-                            <option selected hidden>Select Payment Method</option>
-                            <option value="0">Bkash</option>
-                            <option value="1">Rocket</option>
-                            <option value="2">Nexus</option>
-                            <option value="3">Cash on delivery</option>
-                        </select><br>
-					
-                        <select class="form-control" id = "size" required>
-                            <option selected hidden>Select size</option>
-                            <option value="0">Extra Large</option>
-                            <option value="1">Large</option>
-                            <option value="2">Medium</option>
-                            <option value="3">Small</option>
-                        </select><br>
-                    
-					
-                        <select class="form-control"  id="sbid" required>
-                            
-                        </select><br>
-
-                    <h2>Receiver Information</h2>
-
-					
-                        <input type = "text" class="form-control" id= "rname"; placeholder = "Full Name" required>
-                        <span style="color:red;" id="errname"></span><br>
-
-                        <input type = "text" class="form-control" id = "rcontact" placeholder = "Contact Number" required>
-                        <span style="color:red;" id="errcontact"></span><br>
-                        <input type = "email" class="form-control" id = "email" placeholder = "Email">
-                        <span style="color:red;" id="erremail"></span><br>
-                        <input type = "text" class="form-control" id = "raddress" placeholder = "Address" required>
-                        <span style="color:red;" id="erraddress"></span><br>
-                        <select class="form-control" id = "rbid" required>
-
-                        </select><br>
-                    
-					<input type="button" id="confirm" class="btn btn-primary" name="newdelivery" value="Confirm Delivery">
-				</div>
-			</table>
-        </div>
-    </div>
-</div>
-</div>
+                        <tr>
+                            <td class="tdattribute">
+                                2. If We ship any product than you will no longer able to cancel the service freely.
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+                            <td class="tdattribute">
+                                3. You will get notified about when your product is released. And after release we do not have any longer access.
+                            </td>
+                        </tr>
+        
+                        <tr>
+        
+                            <td class="tdattribute">4. You might get blocked for suspiciuos uses.</td>
+        
+                        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
 </div>
 </div>
 </body>

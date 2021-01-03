@@ -1,14 +1,12 @@
-
 <!doctype html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
 
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -23,9 +21,6 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <script src="../assets/js/icons.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -33,12 +28,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="../assets/js/script.js" ></script>
-  <link rel="stylesheet" type="text/css" href="styles/jquery-clockpicker.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="styles/jquery-clockpicker.min.js"></script>
-
-  
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
+  <script type="text/javascript" src="../assets/ajax/trackProduct.js?v=<?php echo time(); ?>"></script>
 
   <title>Dashboard</title>
   <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
@@ -82,40 +73,40 @@
       </nav>
     </nav>
     <div class="wrapper">
-        <nav id="sidebar">
+      <nav id="sidebar">
             
-            <ul class="list-unstyled components">
+        <ul class="list-unstyled components">
+        <li>
+                <a href="../Customer/customer_home.html"><i class="fa fa-tachometer"></i>Dashboard</a>
+         </li>
+         <li>
+             <a href="../Customer/customer_home.html"><i class="fa fa-user"></i><span>Profile</span></a>
+         </li>   
+         
+         <li>
+                <a href="../Customer/track_products.html"><i class="fa fa-user-md"></i>Track Products</a>
+         </li>
             <li>
-                    <a href=""><i class="fa fa-tachometer"></i>Dashboard</a>
-             </li>
-             <li>
-                 <a href="../Customer/customer_home.html"><i class="fa fa-user"></i><span>Profile</span></a>
-             </li>   
+                <a href="../Customer/c_service_history.html"><i class="fa fa-user-md"></i>History</a>
+         </li>
+         <li>
+                 <a href="../Customer/new_delivery.html"><i class="fas fa-tint"></i><span>New Delivery</span></a>
+         </li>
+         <li>
+                 <a href="../Customer/c_helpline.html"><i class="fas fa-tint"></i><span>Helpline</span></a>
+         </li>
+            
+         <li>
+             <!-- terms and condition.php -->
+             <a href="../Customer/terms&conditions.html"><i class="fas fa-tint"></i><span>Terms and Conditions</span></a>
+         </li>
              
-             <li>
-                    <a href="../Customer/track_products.html"><i class="fa fa-user-md"></i>Track Products</a>
-             </li>
-                <li>
-                    <a href="../Customer/c_service_history.html"><i class="fa fa-user-md"></i>History</a>
-             </li>
-             <li>
-                     <a href="../Customer/new_delivery.html"><i class="fas fa-tint"></i><span>New Delivery</span></a>
-             </li>
-             <li>
-                     <a href="../Customer/c_helpline.html"><i class="fas fa-tint"></i><span>Helpline</span></a>
-             </li>
-                
-             <li>
-                 <!-- terms and condition.php -->
-                 <a href=""><i class="fas fa-tint"></i><span>Terms and Conditions</span></a>
-             </li>
-                 
-                     </ul> 
-             </li>
-            </ul>
-            
-            
-        </nav>
+                 </ul> 
+         </li>
+        </ul>
+        
+        
+    </nav>
         
         
     <div class="content">
@@ -129,8 +120,8 @@
 					<label>Are you sure you want to Cancel the Delivery??:</label>
 				</div>
 				<div class="form-group">
-                    <input type="button" id="button2" class="btn btn-danger" value="Cancel" name="cancel" id="">
-                    <td><input type="button" id="button1" class="btn btn-warning" value="yes" name="yes" id="">
+                    <a href="../Customer/track_products.html" class="btn btn-danger">No</a>
+                    <input type="button" id="yes" class="btn btn-warning" value="yes">
 				</div>
 		</div>
     </div>

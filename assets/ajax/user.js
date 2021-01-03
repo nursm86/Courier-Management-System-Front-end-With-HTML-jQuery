@@ -36,7 +36,7 @@ $(document).ready(function(){
                     }
                     else{
                         if(data.status == 0){
-                             $("#msg").html("You are not Varified Yet.Please wait till We Varify You");
+                             $("#msg").html("You are not Varified Yet.Please wait till We Varify you!!");
                         }
                         else{
                             window.location.href = "../Customer/customer_home.html";
