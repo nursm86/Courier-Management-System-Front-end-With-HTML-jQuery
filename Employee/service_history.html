@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
 
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -23,9 +23,6 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <script src="../assets/js/icons.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -33,14 +30,12 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="../assets/js/script.js" ></script>
-  <link rel="stylesheet" type="text/css" href="styles/jquery-clockpicker.min.css">
-
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="styles/jquery-clockpicker.min.js"></script>
+<script src="../assets/js/jquery-clockpicker.min.js"></script>
+<script type="text/javascript" src="../assets/ajax/eServicehistory.js"></script>
 
-  
-
-  <title>Dashboard</title>
+  <title>Service History</title>
   <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
 </head>
 
@@ -155,34 +150,12 @@
                     <td>Sending Date</td>
                     <td>Reciever Name</td>
                     <td>Address</td>
-                    <td>Product State</td>
+                    <td>Release Date</td>
                     <td></td>
                 </tr>
                 </thead>
-                <tbody>
-                    <div id="service"class="col-md-8">
-                <!-- <?php
-                    foreach($sentProducts as $sentProduct){
-                        echo "<tr>";
-                        echo "<td>".$sentProduct['sbName']."</td>";
-                        echo "<td>".$sentProduct['rbName']."</td>";
-                        echo "<td>".$sentProduct['date']."</td>";
-                        echo "<td>".$sentProduct['rname']."</td>";
-                        echo "<td>".$sentProduct['raddress']."</td>";
-                        if($sentProduct['state'] == 0){
-                            echo "<td>"."Not Yet Received at the Branch"."</td>";
-                        }
-                        else{
-                            echo "<td>"."Ready for Shipping"."</td>";
-                        }
-                        if($sentProduct['state'] == 0 || $sentProduct['state'] == 0){
-                            echo '<td><a href="canceldelivery.php?id='.$sentProduct["id"].'" class="btn btn-danger">Cancel</a></td>';
-                        }
-                        
-                        echo "</tr>";
-                    }
-                
-                ?> -->
+                <tbody id="service">
+                    
                 </tbody>
             </table>
             </div>
@@ -202,29 +175,11 @@
                     <td>Sending Date</td>
                     <td>Reciever Name</td>
                     <td>Address</td>
-                    <td>Product State</td>
+                    <td>Release Date</td>
                 </tr>
                 </thead>
-                <tbody>
-                    <div id="service1"class="col-md-8">
-                <!-- <?php
-                   foreach($receivedProducts as $receivedproduct){
-                    echo "<tr>";
-                    echo "<td>".$receivedproduct['sbName']."</td>";
-                    echo "<td>".$receivedproduct['rbName']."</td>";
-                    echo "<td>".$receivedproduct['date']."</td>";
-                    echo "<td>".$receivedproduct['rname']."</td>";
-                    echo "<td>".$receivedproduct['raddress']."</td>";
-                    if($receivedproduct['state'] == 0){
-                        echo "<td>"."Not Yet Received at the Branch"."</td>";
-                    }
-                    else{
-                        echo "<td>"."Ready for Shipping"."</td>";
-                    }
-                    echo "</tr>";
-                }
-                
-                ?> -->
+                <tbody id="service1">
+                    
                 </tbody>
             </table>
             </div>

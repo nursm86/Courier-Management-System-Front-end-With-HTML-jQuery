@@ -17,7 +17,6 @@ $(document).ready(function(){
     // }
     // params = getParams();
     // var postId = unescape(params.id);
-
     var updateCustomerInfo = function(){
         $.ajax({
             url:"http://localhost:55484/api/customer/"+id+"/profile",

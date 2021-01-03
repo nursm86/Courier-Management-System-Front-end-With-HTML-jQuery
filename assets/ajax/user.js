@@ -51,22 +51,89 @@ $(document).ready(function(){
         });
     };
     
-    
     $("#Register").click(function(){
-        SignUp();
+        if(CustomerValidate()){
+            SignUp();
+        }
     });
-    
-    var SignUp = function(){
+
+    var CustomerValidate = function(){
         var uname =$('#uname').val();
-        var emailAddress = $('#email').val();
-        var ud = Date($.now());
-        var password =  $('#pass').val();
-        var image = "";
+        var email = $('#email').val();
+        var pass =  $('#pass').val();
+        var cpass = $('#cpass').val();
         var name= $('#name').val();
         var contact= $('#contact').val();
         var address= $('#address').val();
         var sequrityQue= $('#sq').val();
-        var updatedDate= Date($.now());
+        var flag = true;
+        if(uname.length <4){
+            flag = false;
+            $('#erruname').html("User Name Must be at least 3 Character Long");
+        }
+        if(email == ""){
+            flag = false;
+            $('#erremail').html("Email is Required");
+        }
+        if(pass.length < 4){
+            flag = false;
+            $('#errpass').html("Password must be at least 4 character long!!!");
+        }
+        if(cpass.length < 4){
+            flag = false;
+            $('#errcpass').html("Password must be at least 4 character long!!!");
+        }
+        if(cpass != pass){
+            flag = false;
+            $('#errpass').html("Password do not match with confirm Password!!!");
+            $('#errcpass').html("Confirm Password do not match with Password!!!");
+        }
+        if(name.length < 4){
+            flag = false;
+            $('#errname').html("Name Must be at least 3 Character Long");
+        }
+        if(contact.length <11 || contact.length > 15){
+            flag = false;
+            $("#errcontact").html("Phone Number is not Valid");
+        }
+        if(address.length < 5){
+            flag = false;
+            $('#erraddress').html("Address Must be at least 5 character long");
+        }
+        if(sequrityQue == ""){
+            flag = false;
+            $("#errsq").html("Sequrity Que is required");
+        }
+        return flag;
+    };
+
+
+    $('#name').focus(function(){
+        $('#errname').html("");
+    });
+    $('#contact').focus(function(){
+        $('#errcontact').html("");
+    });
+    $('#address').focus(function(){
+        $('#erraddress').html("");
+    });
+    $('#uname').focus(function(){
+        $('#erruname').html("");
+    });
+    $('#pass').focus(function(){
+        $('#errpass').html("");
+    });
+    $('#cpass').focus(function(){
+        $('#errcpass').html("");
+    });
+    $('#email').focus(function(){
+        $('#email').html("");
+    });
+    $('#sq').focus(function(){
+        $('#errsq').html("");
+    });
+
+    var SignUp = function(){
         $.ajax({
             url:"http://localhost:55484/api/user/registration",
             method:"POST",
@@ -89,7 +156,6 @@ $(document).ready(function(){
                 if(xmlhttp.status==201)
                 {
                     alert("Account Created Successfully now you can login");
-                    window.location.href = "../Basic/login.html";
                 }
                 else
                 {
