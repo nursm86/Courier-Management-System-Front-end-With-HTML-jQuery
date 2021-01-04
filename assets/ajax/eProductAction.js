@@ -36,6 +36,7 @@ $(document).ready(function(){
                     $('#remail').html(data.recieverEmail);
                     $('#rphone').html(data.recieverContact);
                     $('#raddress').html(data.recieverAddress);
+                    $('#rdate').html(data.updatedDate);
                     // if(data.user.status == 0){
                     //     $('#status').html("InValid");
                     //     $('#unblock').hide();
@@ -158,6 +159,6 @@ $(document).ready(function(){
         shipProduct();
     });
     $('#release').click(function(){
-        shipProduct();
+        releaseProduct();
     });
 });
