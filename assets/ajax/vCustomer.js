@@ -42,7 +42,7 @@ $(document).ready(function(){
                             str +="<td>InValid</td>";
                         }
                         else if(value.user.status == 1){
-                            str +="<td>Valid</td>";
+                            str +="<td>Verified</td>";
                         }
                         else{
                             str +="<td>Blocked</td>";

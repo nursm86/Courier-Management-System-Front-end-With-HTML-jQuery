@@ -30,7 +30,8 @@
     crossorigin="anonymous"></script>
   <script src="../assets/js/script.js" ></script>
   <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
-  <script type="text/javascript" src="../assets/ajax/CustomerAServiceHistory.js"></script>
+  <script type="text/javascript" src="../assets/ajax/CustomerAServiceHistory.js?v=<?php echo time(); ?>"></script>
+  <script type="text/javascript" src="../assets/ajax/search.js"></script>
 
   <title>Service History</title>
   <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
@@ -113,21 +114,8 @@
     All released Products
     </h1><br>
 
-    <div class="row">
-        <div class="col-md-2">
-            <div class="form-group">
-
-                <select class="form-control" name="accountType" id="searchBy">
-                <option value="" disabled selected>Search By</option>
-                        <option value="ReceiverName" >Name</option>
-                        <option value="ReceiverContact" >Contact</option>
-                        <option value="ReceiverAddress" >Address</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-8 donor">
-        <input type="text" name="" id="search_text" placeholder="Search Customers " onkeyup="search()">
-        </div>
+        <div class="text-center">
+        <input type="text" name="" id="search" placeholder="Search Product">
     </div><br>
 
     <div class="row ">

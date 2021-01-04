@@ -39,7 +39,7 @@ $(document).ready(function(){
                         str += "<td>"+value.updatedDate+"</td>";
                         str += "<td>"+value.recieverName+"</td>";
                         str += "<td>"+value.recieverAddress+"</td>";
-                        str += "<td>Received by the Receiver</td>";
+                        str += "<td>"+value.release_Date+"</td>";
                         str += "</tr>";
                         
                     });

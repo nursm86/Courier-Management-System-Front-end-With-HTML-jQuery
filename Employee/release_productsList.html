@@ -34,6 +34,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/js/jquery-clockpicker.min.js"></script>
     <script type="text/javascript" src="../assets/ajax/eReleaseProducts.js"></script>
+    <script type="text/javascript" src="../assets/ajax/search.js"></script>
     
     <title>ReleaseAble Products</title>
     <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
@@ -136,20 +137,8 @@
     Release Products
     </h1><br>
 
-    <div class="row">
-        <div class="col-md-2">
-            <div class="form-group">
-
-                <select class="form-control" name="accountType" id="searchBy">
-                <option value="" disabled selected>Search By</option>
-                        <option value="ReceiverName" >Name</option>
-                        <option value="ReceiverContact" >Contact</option>
-                        <option value="ReceiverAddress" >Address</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-8 donor">
-        <input type="text" name="" id="search_text" placeholder="Search Customers " onkeyup="search()">
+        <div class="text-center">
+            <input type="text" name="" id="search" placeholder="Search Customers ">
         </div>
     </div><br>
 

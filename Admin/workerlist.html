@@ -33,6 +33,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="../assets/js/jquery-clockpicker.min.js"></script>
       <script type="text/javascript" src="../assets/ajax/employeelist.js"></script>
+      <script type="text/javascript" src="../assets/ajax/search.js"></script>
       
         <title>Employee List</title>
         <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
@@ -119,30 +120,18 @@
     <div class="col-md-2">
             <div class="form-group">
 
-                <select class="form-control" name="accountType" id="type">
-                    <option value="" disabled selected>Show</option>
-                    <option value="*">All</option>
-                    <option value="0">Manager</option>
-                    <option value="1">Driver</option>
-                    <option value="2">Delivery boy</option>
-                    <option value="3">Worker</option>
+                <select class="form-control" name="accountType" id="see">
+                    <option value="" selected>Show All</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Driver">Driver</option>
+                    <option value="Delivery boy">Delivery boy</option>
+                    <option value="Worker">Worker</option>
                 </select>
             </div>
         </div>
 
-        <div class="col-md-2">
-            <div class="form-group">
-
-                <select class="form-control" name="accountType" id="searchBy">
-                <option value="" disabled selected>Search By</option>
-                        <option value="Name" >Name</option>
-                        <option value="ContactNo">Contact</option>
-                        <option value="Address" >Address</option>
-                </select>
-            </div>
-        </div>
         <div class="col-md-8 donor">
-        <input type="text" name="" id="search_text" placeholder="Search Customers " onkeyup="search()">
+        <input type="text" name="" id="search" placeholder="Search Customers">
         </div>
     </div><br>
 

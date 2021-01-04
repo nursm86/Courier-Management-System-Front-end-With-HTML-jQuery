@@ -33,6 +33,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../assets/js/jquery-clockpicker.min.js"></script>
   <script type="text/javascript" src="../assets/ajax/branch.js"></script>
+  <script type="text/javascript" src="../assets/ajax/search.js"></script>
   
     <title>All Branch</title>
     <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
@@ -114,31 +115,21 @@
     <h1 class="text-white bg-dark text-center">
     All Branches
     </h1><br>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="form-group">
-
-                <select class="form-control" name="accountType" id="searchBy">
-                        <option value="" disabled selected>Search By</option>
-                        <option value="Branch_Name" >Name</option>
-                        <option value="Address" >Address</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-8 donor">
-        <input type="text" name="" id="search_text" placeholder="Search Branchhes" onkeyup="search()">
-        </div>
-    </div><br>
+        <div class="text-center">
+        <input type="text" name="" id="search" placeholder="Search Branches" width="100">
+        </div><br>
 
             <div class="row ">
 
             <table class="table" id="myTable">
                 <thead>
                     <tr>
-                        <td>Branch Name</td>
-                        <td>Address</td>
-                        <td>Updated Date</td>
-                        <td>Action</td>
+                        <strong>
+                          <td><b>Branch Name</b></td>
+                          <td><b>Address</b></td>
+                          <td><b>Updated Date</b></td>
+                          <td><b>Action</b></td>
+                        </strong>
                     </tr>
                 </thead> 
                 <tbody id = "branch">

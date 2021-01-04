@@ -36,7 +36,8 @@
       <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/js/jquery-clockpicker.min.js"></script>
-    <script type="text/javascript" src="../assets/ajax/vCustomer.js"></script>
+    <script type="text/javascript" src="../assets/ajax/vCustomer.js?v=<?php echo time(); ?>"></script>
+    <script type="text/javascript" src="../assets/ajax/search.js"></script>
     
       <title>Customer's List</title>
       <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
@@ -138,22 +139,14 @@
     <div class="row">
         <div class="col-md-2">
                 <select class="form-control" id="see">
-                    <option value="*" selected>All</option>
-                            <option value="Name" >In Valid</option>
-                            <option value="ContactNo" >Valid</option>
-                            <option value="Address" >Blocked</option>
+                    <option value="" selected>All</option>
+                            <option value="InValid" >InValid</option>
+                            <option value="Verified" >Verified</option>
+                            <option value="Blocked" >Blocked</option>
                     </select>
         </div>
-        <div class="col-mod-2">
-            <select class="form-control" id="searchBy">
-                <option value="" disabled selected>Search By</option>
-                        <option value="Name" >Name</option>
-                        <option value="ContactNo" >Contact</option>
-                        <option value="Address" >Address</option>
-                </select>
-        </div>
         <div class="col-md-8 donor">
-            <input type="text" name="" id="search_text" placeholder="Search Customers " onkeyup="search()">
+            <input type="text" name="" id="search" placeholder="Search Customers ">
         </div>
     </div><br>
 
