@@ -49,9 +49,6 @@
 				<div class="form-group">
 					<span style="color:red;" id="msg"></span>
 				</div>
-				<div class="form-group">
-					
-				</div>
 				<input type="button" id="login" name="login" value="Login" class="btn btn-success">
 				<br>
 				<div class="form-group">
@@ -63,25 +60,3 @@
 </body>
 
 </html>
-
-<script>
-	function get(id){
-		return document.getElementById(id);
-	}
-	function validateForm(){
-		var user = get("user").value;
-        var pass = get("pass").value;
-		var err_user = get("err_user");
-		var err_pass = get("err_pass");
-		var has_error = true;
-		if(user ==""){
-			err_user.innerHTML ="User Name required";
-			has_error = false;
-		}
-		if(pass ==""){
-			err_pass.innerHTML ="Password required";
-			has_error = false;
-		}
-		return has_error;
-	}
-</script>

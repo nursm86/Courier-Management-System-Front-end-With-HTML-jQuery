@@ -58,9 +58,34 @@ $(document).ready(function(){
     
     $("#Register").click(function(){
         if(CustomerValidate()){
-            SignUp();
+            if($("#erruname").html() !=""){
+                alert("please choose another username");
+                $('#uname').focus();
+            }
+            else{
+                SignUp();
+            }  
         }
     });
+
+    $('#uname').focusout(function(){
+        checkUserName();
+    });
+
+    var checkUserName = function(){
+        var username = $('#uname').val();
+        $.ajax({
+            url:"http://localhost:55484/api/user/check/"+username,
+            method:"GET",
+            header:"Content-Type:application/json",
+            complete:function(xmlhttp,status){
+                if(xmlhttp.status==200)
+                {
+                    $('#erruname').html("User Name Already Exist!!!");
+                }
+            }
+        });
+    };
 
     var CustomerValidate = function(){
         var uname =$('#uname').val();
@@ -132,7 +157,7 @@ $(document).ready(function(){
         $('#errcpass').html("");
     });
     $('#email').focus(function(){
-        $('#email').html("");
+        $('#erremail').html("");
     });
     $('#sq').focus(function(){
         $('#errsq').html("");
@@ -161,6 +186,7 @@ $(document).ready(function(){
                 if(xmlhttp.status==201)
                 {
                     alert("Account Created Successfully now you can login");
+                    window.location.href = "../Basic/login.html";
                 }
                 else
                 {

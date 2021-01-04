@@ -102,9 +102,34 @@ $(document).ready(function(){
 
     $("#AddNewEmployee").click(function(){
        if(EmployeeValidate()){
+        if($("#erruname").html() !=""){
+            alert("please choose another username");
+            $('#uname').focus();
+        }
+        else{
             AddNewEmployee();
+        }   
        }
     });
+
+    $('#uname').focusout(function(){
+        checkUserName();
+    });
+
+    var checkUserName = function(){
+        var username = $('#uname').val();
+        $.ajax({
+            url:"http://localhost:55484/api/user/check/"+username,
+            method:"GET",
+            header:"Content-Type:application/json",
+            complete:function(xmlhttp,status){
+                if(xmlhttp.status==200)
+                {
+                    $('#erruname').html("User Name Already Exist!!!");
+                }
+            }
+        });
+    };
 
     $('#uname').focus(function(){
         $('#erruname').html("");
