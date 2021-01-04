@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    var uname = Cookies.get('uname');
+    var pass = Cookies.get('pass');
+    var id = Cookies.get('id');
+
     function getParams() {
         var idx = document.URL.indexOf('?');
         var params = new Array();
@@ -21,8 +25,11 @@ $(document).ready(function(){
             header:"Content-Type:application/json",
             data:{
                 name: $('#name').val(),
+                dob : $('#dob').val(),
                 contact: $('#phone').val(),
-                address: $('#address').val()
+                address: $('#address').val(),
+                blood_Group : $('#bgroup').val(),
+                qualification :$("#qualification").val()
             },
             headers: {
                 "Authorization": "Basic " + btoa(uname+ ":" + pass)
@@ -34,6 +41,7 @@ $(document).ready(function(){
                 }
                 else
                 {
+                    console.log(xmlhttp.responseJSON.modelState);
                     alert("Something Went Wrong!!!");
                 }
             }
@@ -44,10 +52,25 @@ $(document).ready(function(){
         var name = $('#name').val();
         var contact = $('#phone').val();
         var address = $('#address').val();
+        var dob = $('#dob').val();
+        var blood_Group  = $('#bgroup').val();
+        var qualification = $("#qualification").val();
         var flag = true;
         if(name.length <4){
             flag = false;
             $('#errname').html("Name Must be at least 3 Character Long");
+        }
+        if(dob == ""){
+            flag = false;
+            $('#errdob').html("Date of Birth is required");
+        }
+        if(blood_Group == ""){
+            flag = false;
+            $('#errbgroup').html("Blood Group is Required");
+        }
+        if(qualification == ""){
+            flag = false;
+            $('#errqualification').html("Qualification is required");
         }
         if(contact.length <11 || contact.length > 15){
             flag = false;
@@ -60,7 +83,7 @@ $(document).ready(function(){
         return flag;
     };
 
-    $("#updateInfo").click(function(){
+    $("#updateDocument").click(function(){
        if(EmployeeValidate()){
             updateEmployeeInfo();
        }
@@ -74,6 +97,12 @@ $(document).ready(function(){
     });
     $('#address').focus(function(){
         $('#erraddress').html("");
+    });
+    $('#dob').focus(function(){
+        $('#errdob').html("");
+    });
+    $('#bgroup').focus(function(){
+        $('#errbgroup').html("");
     });
 
 });

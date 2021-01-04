@@ -1,50 +1,42 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
   
-<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-
-  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      rel="stylesheet">
-  <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	
-
-  <script src="../assets/js/icons.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="../assets/js/script.js" ></script>
-  <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../assets/js/jquery-clockpicker.min.js"></script>
-
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        rel="stylesheet">
+    <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   
-
-  <title>Dashboard</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
-</head>
+    <script src="../assets/js/icons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js" ></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery-clockpicker.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../assets/js/jquery-clockpicker.min.js"></script>
+  <script type="text/javascript" src="../assets/ajax/problemAction.js"></script>
+  
+    <title>See Workers Problem</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/system_images/logo2.png">
+  </head>
 
 <body>
 
@@ -124,14 +116,46 @@
     <div class="d-flex justify-content-center align-items-center container ">
         <div class="col-md-8 donor">
             <h1 class="text-white bg-dark text-center">
-                Cancelling products
+                Responding to Wroker's Problem.
             </h1>
+            <table class="table">
+              <tbody>
+                  <tr>
+
+                      <td class="tdattribute">User Name</td>
+                      <td>:</td>
+                      <td id="uname"></td>
+
+                  </tr>
+                  <tr>
+
+                      <td class="tdattribute">Branch Name</td>
+                      <td>:</td>
+                      <td id="branch"></td>
+
+                  </tr>
+
+                  <tr>
+
+                      <td class="tdattribute">Request Date</td>
+                      <td>:</td>
+                      <td id="date"></td>
+
+                  </tr>
+
+                  <tr>
+
+                      <td class="tdattribute">Problem</td>
+                      <td>:</td>
+                      <td id="problem"></td>
+
+                  </tr>
+                  
+          </table>
 				<div class="form-group">
-					<label>Are you sure you want to Cancel the Delivery??:</label>
-				</div>
-				<div class="form-group">
-                    <input type="button" id="cancel" class="btn btn-danger" value="Cancel" name="cancel" id="">
-                    <td><input type="button" id="yes" class="btn btn-warning" value="yes" name="yes" id="">
+            <a href="../Admin/solve_problem.html" class="btn btn-warning">Back</a>
+            <input type="button" id="solve" class="btn btn-success" value="Solve the problem">
+            <input type="button" id="delete" class="btn btn-danger" value="Remove the problem">
 				</div>
 		</div>
     </div>

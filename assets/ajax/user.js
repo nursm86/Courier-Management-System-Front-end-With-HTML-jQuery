@@ -32,7 +32,12 @@ $(document).ready(function(){
                         window.location.href = "../Admin/admin_home.html";
                     }
                     else if(data.userType == 1){
-                        window.location.href = "../Employee/employee_home.html";
+                        if(data.status ==1){
+                            window.location.href = "../Employee/employee_home.html";
+                        }
+                        else if(data.status == 0){
+                            window.location.href = "../Employee/updateDocument.html?id="+data.id;
+                        }
                     }
                     else{
                         if(data.status == 0){
