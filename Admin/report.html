@@ -3,19 +3,26 @@
     <title>Report Page</title>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
-        <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    
+
         <style>
             table{
                 font-family: Arial, Helvetica, sans-serif;
                 border-collapse: collapse;
-                width: 100%;
+                width: 70%;
+                margin-left:auto; 
+                margin-right:auto;
             }
             table td, table thead{
                 border: 1px solid #ddd;
@@ -32,9 +39,9 @@
                 color: #fff;
             }
         </style>
-        <script type="text/javascript" src="../assets/ajax/adminReport.js"></script>
+        <script type="text/javascript" src="../assets/ajax/adminReport.js?v=<?php echo time(); ?>"></script>
 </head>
-    <body>
+    <body id="content">
     <br>
     <div>
         Admin's Name : <span id="name"></span>
@@ -42,7 +49,8 @@
         <h1 class="text-white bg-dark text-center">
             Admin's Report
         </h1>
-        <table>
+        <div style="text-align:center;">
+        <table id="tableadmin" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
                     <td>Total Manager</td>
@@ -71,5 +79,8 @@
                 </tr>
             </tbody>
         </table>
-    </body>
+    </div>
+    </body><br>
 </html>
+<center><div id="download" class="btn btn-success">Download the Report</div></center>
+<center><a href="../Admin/admin_home.html" class="btn btn-warning">Back</a></center>

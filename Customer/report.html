@@ -3,7 +3,9 @@
     <title>Report Page</title>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
         <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
         <!-- Bootstrap CSS -->
@@ -15,7 +17,9 @@
             table{
                 font-family: Arial, Helvetica, sans-serif;
                 border-collapse: collapse;
-                width: 100%;
+                width: 70%;
+                margin-left:auto; 
+                margin-right:auto;
             }
             table td, table thead{
                 border: 1px solid #ddd;
@@ -34,7 +38,7 @@
         </style>
         <script type="text/javascript" src="../assets/ajax/customerReport.js"></script>
 </head>
-    <body>
+    <body id="content">
     <br>
     <div>
         Customer's Name : <span id="name"></span>
@@ -88,3 +92,5 @@
         </table>
     </body>
 </html>
+<center><div id="download" class="btn btn-success">Download the Report</div></center>
+<center><a href="../Customer/customer_home.html" class="btn btn-warning">Back</a></center>
