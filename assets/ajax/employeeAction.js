@@ -2,6 +2,16 @@ $(document).ready(function(){
     var uname = Cookies.get('uname');
     var pass = Cookies.get('pass');
     var id = Cookies.get('id');
+    var type = Cookies.get('utype');
+
+    if(uname == ""){
+        Cookies.set("errmsg","Please Login First!!!");
+        window.location.href = "../Basic/login.html";
+    }
+    else if(type != 0){
+        Cookies.set("errmsg","You are not an Admin so you are not allowed there");
+        window.location.href = "../Basic/login.html";
+    }
     
     function getParams() {
         var idx = document.URL.indexOf('?');

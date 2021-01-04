@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $("#msg").html(Cookies.get('errmsg'));
+    Cookies.set('errmsg',"");
     $("#userName").focus(function(){
         $("#msg").html("");
     });
@@ -28,6 +30,7 @@ $(document).ready(function(){
                     Cookies.set("uname",$("#userName").val());
                     Cookies.set("pass",$("#pass").val());
                     Cookies.set("id",data.id);
+                    Cookies.set("utype",data.userType);
                     if(data.userType == 0){
                         window.location.href = "../Admin/admin_home.html";
                     }
