@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Report Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../assets/js/jquery-3.5.1.js"></script>
+        <!-- FONTAWESOME : https://kit.fontawesome.com/a23e6feb03.js -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <style>
+            table{
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            table td, table thead{
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            table tr:nth-child(even){
+                background-color: aqua;
+            }
+            table thead{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color: #4CAF50;
+                color: #fff;
+            }
+        </style>
+        <script type="text/javascript" src="../assets/ajax/adminReport.js"></script>
+</head>
+    <body>
+    <br>
+    <div>
+        Admin's Name : <span id="name"></span>
+    </div></br>
+        <h1 class="text-white bg-dark text-center">
+            Admin's Report
+        </h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Total Manager</td>
+                    <td>:</td>
+                    <td id="tm"></td>
+                </tr>
+                <tr>
+                    <td>Total Driver</td>
+                    <td>:</td>
+                    <td id="td">3</td>
+                </tr>
+                <tr>
+                    <td>Total Delivery Boy</td>
+                    <td>:</td>
+                    <td id="tdb">5</td>
+                </tr>
+                <tr>
+                    <td>Highest Paid Manager</td>
+                    <td>:</td>
+                    <td><span id="hpm"></span>(<span id="salary"></span> taka)</td>
+                </tr>
+                <tr>
+                    <td>Total Branch</td>
+                    <td>:</td>
+                    <td id="tb"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
